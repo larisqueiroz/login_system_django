@@ -11,17 +11,18 @@ This is a login system which allows the user to sign up, sign in using username 
 * HTTP
 
 ## Get started
-1. Install the libs required
+1. Install the required libs
 ```
 pip install -r requirements.txt
 ```
-2. Create a new gmail account.
+2. Create a new Gmail account.
 
 This project sends emails through Gmail and to do so, the code needs permition. You can do it by editing security settings on your Gmail account. However, it's not cool doing it on your personal account. So, the best choice is to create a new one for this purpose.
 
 Turn this option ON: https://myaccount.google.com/lesssecureapps
 
 3. Insert your email credentials on info.py.
+
 4. Run run.bat or run using an IDE with the command:
 ```
 python manage.py runserver

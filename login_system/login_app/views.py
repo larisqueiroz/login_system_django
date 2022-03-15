@@ -13,7 +13,6 @@ from django.template.loader import render_to_string
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.utils.encoding import force_bytes, force_str
 from . tokens import generate_token
-from django.contrib.auth.hashers import check_password, make_password
 
 def index(request):
     return render(request, 'index.html')
@@ -134,15 +133,8 @@ def delete(request):
             print(request.user.password)
             logout(request)
             User.objects.get(email=email_acc).delete()
-            # print(User.objects.get(email=email_acc))
             messages.success(request, "Deleted successfully.")
             return redirect('index')
 
     return render(request, "delete_account.html")
 
-for item in User.objects.all():
-    print(item.password, item.first_name)
-# User.objects.get(email='larissa.queiroz95@gmail.com').delete()
-# print('--------------------')
-# for item in User.objects.all():
-#     print(item.email)

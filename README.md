@@ -3,7 +3,7 @@
 A login system in Python using Django.
 
 ## Description
-This is the first part of a chat app. It's a login system which allows the user to sign up, sign in using username and password, sends an email with a confirmation link and gives the possibility to delete the account created.
+This is a login system which allows the user to sign up, sign in using username and password  and gives the possibility to delete the account created. Also sends an email with a confirmation link when the user signs up. Later on, this application will be a part of a chat app project.
 
 ## Built with
 * Python

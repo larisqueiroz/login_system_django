@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>{% block title %}Sign Up{% endblock %}</title>
+    {% load static %}
+        <link rel="shortcut icon" href="{% static "login_app/media/favicon.png" %}"/>
+    <style>
+        .wrapper {
+            text-align: center;
+        }
+
+        .button {
+            position: relative;
+            top: 50%;
+        }
+    </style>
+    <div class="wrapper">
+        {% load static %}
+        <img src="{% static "login_app/media/GoChat.png" %}" alt="logo" height="300" width="300"/>
+    </div>
+    
+</head>
+
+<body style="background-color: #ffde59;">
+
+    <div class="wrapper">
+
+    {% for message in messages %}
+        <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+            <strong>Message:</strong>{{message}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+    {% endfor %}
+
+        <h1 style="text-align:center; color: #8c52ff;">Sign Up</h1>
+    <form action="/signup", method="post">
+    {% csrf_token %}
+        <label for="1stname">First name</label><br>
+        <input type="text" id="1stname" name="1stname" placeholder="Enter your first name" required><br>
+        <label for="lastname">Last name</label><br>
+        <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required><br>
+        <label for="email">Email address</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+        <label for="username">Username</label><br>
+        <input type="text" id="username" name="username" placeholder="Create a username" required><br>
+        <label for="passwd">Password</label><br>
+        <input type="password" id="passwd" name="passwd" placeholder="Create a password" required><br>
+        <label for="repeat_passwd">Repeat password</label><br>
+        <input type="password" id="repeat_passwd" name="repeat_passwd" placeholder="Repeat the password" required><br>
+        
+        <button type = 'submit' style="text-align:center">Sign Up</button>
+    </div>
+    </form>
+    
+</body>
+
+</html>

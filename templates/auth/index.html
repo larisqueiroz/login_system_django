@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <title>{% block title %}GoChat{% endblock %}</title>
+    {% load static %}
+        <link rel="shortcut icon" href="{% static "login_app/media/favicon.png" %}"/>
+    <style>
+        .wrapper {
+            text-align: center;
+        }
+        .button {
+            position: relative;
+            top:50%;
+        }
+    </style>
+    <div class="wrapper">
+        {% load static %}
+        <img src="{% static "login_app/media/GoChat.png" %}" alt="logo" height="300" width="300"/>
+    </div>
+</head>
+
+<body style="background-color: #ffde59;">
+    
+    <div class="wrapper">
+        {% for message in messages %}
+        <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+            <strong>Message:</strong>{{message}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+    {% endfor %}
+        
+        <h1 style="text-align:center; color: #8c52ff;">Welcome!</h1>
+        
+        {% if user.is_authenticated %}
+        <h3 style="text-align: center;">Hello, {{first_name}}</h3>
+        <h4 style="text-align: center;">You are logged in.</h4>
+        <button class = "button" type = 'submit' style="text-align:center"><a href="/signout">Sign Out</a></button>
+        <button class = "button" type = 'submit' style="text-align:center"><a href="/unsign">Delete Account</a></button>
+        {% else %}
+        <button class = "button" type = 'submit' style="text-align:center"><a href="/signup">Sign Up</a></button>
+        <button class = "button" type = 'submit' style="text-align:center"><a href="/signin">Sign In</a></button>
+        {% endif %}
+
+    </div>
+</body>
+
+</html>

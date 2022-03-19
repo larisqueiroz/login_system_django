@@ -9,7 +9,8 @@ urlpatterns = [
     path('signin', views.signin, name='signin'),
     path('signout', views.signout, name='signout'),
     path('activate/<uidb64>/<token>', views.activate, name='activate'),
-    path('unsign', views.delete, name= 'unsign')
+    path('unsign', views.delete, name= 'unsign'),
+    path('accounts/profile/', views.index, name= 'index_google'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

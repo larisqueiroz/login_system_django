@@ -1,7 +1,7 @@
 {% autoescape off %}
 
  Welcome to GoChat!
- Hello {{ name }}.
+ Hello.
  Please confirm your email by clicking on the following link.
 
  Confirmation Link: http://{{ domain }}{% url 'activate' uidb64=uid token=token %} 

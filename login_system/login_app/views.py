@@ -119,6 +119,7 @@ def activate(request, uidb64, token):
     if user is not None and generate_token.check_token(user, token):
         user.is_active = True
         user.save()
+        user.backend = 'allauth.account.auth_backends.AuthenticationBackend'
         login(request, user)
         return redirect('index')
     else:
@@ -129,8 +130,6 @@ def delete(request):
         email_acc = request.POST['email']
         
         if User.objects.filter(email = email_acc).exists():
-            print(email_acc)
-            print(request.user.password)
             logout(request)
             User.objects.get(email=email_acc).delete()
             messages.success(request, "Deleted successfully.")

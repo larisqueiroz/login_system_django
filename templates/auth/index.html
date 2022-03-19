@@ -40,6 +40,8 @@
         {% else %}
         <button class = "button" type = 'submit' style="text-align:center"><a href="/signup">Sign Up</a></button>
         <button class = "button" type = 'submit' style="text-align:center"><a href="/signin">Sign In</a></button>
+        {% load socialaccount %}
+        <button class = "button" type = 'submit' style="text-align:center"><a href="{% provider_login_url 'google' %}">Login With Google</a></button>
         {% endif %}
 
     </div>

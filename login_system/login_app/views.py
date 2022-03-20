@@ -91,6 +91,7 @@ def signin(request):
         passwd = request.POST['passwd']
 
         user = authenticate(username=username, password=passwd)
+        user.backend = 'django.contrib.auth.backends.ModelBackend'
 
         if user is not None:
             login(request, user)
@@ -119,7 +120,7 @@ def activate(request, uidb64, token):
     if user is not None and generate_token.check_token(user, token):
         user.is_active = True
         user.save()
-        user.backend = 'allauth.account.auth_backends.AuthenticationBackend'
+        user.backend = 'django.contrib.auth.backends.ModelBackend'
         login(request, user)
         return redirect('index')
     else:

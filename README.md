@@ -33,6 +33,8 @@ python login_system/manage.py runserver
 <img src="assets/home.png" width="700" height= "350" title="homepage">
 <img src="assets/sign up.png" width="700" height= "350" title="signup page">
 <img src="assets/sign in.png" width="700" height= "350" title="signin page">
+<img src="assets/google_redirect.png" width="700" height= "350" title="redirect google login">
+<img src="assets/google_login.png" width="700" height= "350" title="google_login">
 <img src="assets/delete.png" width="700" height= "350" title="delete">
 
 ## Contact me

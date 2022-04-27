@@ -1,9 +1,9 @@
-# chat_django
+# login_system_django
 <img src="assets/chat.png" width="700" height= "350" title="chat">
 A login system in Python using Django.
 
 ## Description
-This is a real time chat app system. When authenticated, the user can create a room and chat.
+This is a real time chat app system which allows the user to sign up, sign in using username and password (or with Google) and gives the possibility to delete the account. Also sends an email with a confirmation link when the user signs up.
 
 ## Built with
 * Python (3.10.1)

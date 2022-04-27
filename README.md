@@ -1,14 +1,15 @@
 # login_system_django
-<img src="assets/home.png" width="700" height= "350" title="homepage">
+<img src="assets/chat.png" width="700" height= "350" title="chat">
 A login system in Python using Django.
 
 ## Description
-This is a login system which allows the user to sign up, sign in using username and password (or with Google) and gives the possibility to delete the account. Also sends an email with a confirmation link when the user signs up. Later on, this application will be a part of a chat app project.
+This is a real time chat app system which allows the user to sign up, sign in using username and password (or with Google) and gives the possibility to delete the account. Also sends an email with a confirmation link when the user signs up.
 
 ## Built with
 * Python (3.10.1)
 * Django
 * HTTP
+* Ajax
 
 ## Get started
 1. Install the required libs
@@ -21,15 +22,20 @@ This project sends emails through Gmail and to do so, the code needs permition. 
 
 Turn this option ON: https://myaccount.google.com/lesssecureapps
 
-3. Insert your email's credentials on login_system/login_system/info.py.
+3. Insert your email's credentials on chat_system/chat_system/info.py.
 
 4. Run run.bat or run using an IDE with the command:
 ```
-python login_system/manage.py runserver
+python chat_system/manage.py runserver
 ```
 5. Access http://localhost:8000/
 
+6. Sign up, check your email's inbox and click on the link that was sent.
+
+7. Your account is now active and you can create/enter a room to start a conversation.
+
 ## Screenshots
+<img src="assets/chat.png" width="700" height= "350" title="chat">
 <img src="assets/home.png" width="700" height= "350" title="homepage">
 <img src="assets/sign up.png" width="700" height= "350" title="signup page">
 <img src="assets/sign in.png" width="700" height= "350" title="signin page">

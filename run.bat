@@ -1,1 +1,1 @@
-python login_system/manage.py runserver
+python chat_system/manage.py runserver

@@ -2,7 +2,7 @@
 <head>
     <title>{% block title %}GoChat{% endblock %}</title>
     {% load static %}
-        <link rel="shortcut icon" href="{% static "login_app/media/favicon.png" %}"/>
+        <link rel="shortcut icon" href="{% static "chat_app/media/icon.png" %}"/>
     <style>
         .wrapper {
             text-align: center;
@@ -14,7 +14,7 @@
     </style>
     <div class="wrapper">
         {% load static %}
-        <img src="{% static "login_app/media/GoChat.png" %}" alt="logo" height="300" width="300"/>
+        <img src="{% static "chat_app/media/GoChat.png" %}" alt="logo" height="300" width="300"/>
     </div>
 </head>
 
@@ -36,7 +36,13 @@
         <h3 style="text-align: center;">Hello, {{first_name}}</h3>
         <h4 style="text-align: center;">You are logged in.</h4>
         <button class = "button" type = 'submit' style="text-align:center"><a href="/signout">Sign Out</a></button>
-        <button class = "button" type = 'submit' style="text-align:center"><a href="/unsign">Delete Account</a></button>
+        <button class = "button" type = 'submit' style="text-align:center"><a href="/unsign">Delete Account</a></button><br>
+        <form id="post-form" method="POST" action="checkview">
+            {% csrf_token %}
+            <label for="room">Room</label><br>
+            <input type="text" id="room" name="room"/><br>
+            <input type="submit" value="Enter Room">
+        </form>
         {% else %}
         <button class = "button" type = 'submit' style="text-align:center"><a href="/signup">Sign Up</a></button>
         <button class = "button" type = 'submit' style="text-align:center"><a href="/signin">Sign In</a></button>

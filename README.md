@@ -1,4 +1,4 @@
-# login_system_django
+# chat_django
 <img src="assets/chat.png" width="700" height= "350" title="chat">
 A login system in Python using Django.
 

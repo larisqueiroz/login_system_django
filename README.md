@@ -30,10 +30,6 @@ python chat_system/manage.py runserver
 ```
 5. Access http://localhost:8000/
 
-6. Sign up, check your email's inbox and click on the link that was sent.
-
-7. Your account is now active and you can create/enter a room to start a conversation.
-
 ## Screenshots
 <img src="assets/home.png" width="700" height= "350" title="homepage">
 <img src="assets/sign up.png" width="700" height= "350" title="signup page">

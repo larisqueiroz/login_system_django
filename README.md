@@ -1,5 +1,5 @@
 # login_system_django
-<img src="assets/chat.png" width="700" height= "350" title="chat">
+<img src="assets/home.png" width="700" height= "350" title="homepage">
 A login system in Python using Django.
 
 ## Description
@@ -35,7 +35,6 @@ python chat_system/manage.py runserver
 7. Your account is now active and you can create/enter a room to start a conversation.
 
 ## Screenshots
-<img src="assets/chat.png" width="700" height= "350" title="chat">
 <img src="assets/home.png" width="700" height= "350" title="homepage">
 <img src="assets/sign up.png" width="700" height= "350" title="signup page">
 <img src="assets/sign in.png" width="700" height= "350" title="signin page">
